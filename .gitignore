@@ -1,0 +1,13 @@
+# python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# virtual environments
+.venv/
+venv/
+env/
+
+# data
+01_data
