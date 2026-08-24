@@ -67,8 +67,11 @@ Temporal features provide the strongest predictive power, while weather variable
 ## Project Structure
 
 ├── data/ # Dataset files
+
 ├── notebooks/ # EDA and modelling notebooks
+
 ├── reports/ # Presentation and 1 pager
+
 └── README.md
 
 ## Technologies
