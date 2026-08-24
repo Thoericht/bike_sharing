@@ -8,7 +8,11 @@ The goal is to build a reliable forecasting model suitable for a production-orie
 
 ## Dataset
 
-The dataset contains **17,379 hourly observations** from 2011–2012.
+This project uses the Bike Sharing Dataset published by Fanaee-T, H. (2013) through the UCI Machine Learning Repository. The dataset contains **17,379 hourly observations** from 2011–2012, including rental counts, weather conditions, and calendar-related variables.
+
+Citation:  
+Fanaee-T, H. (2013). *Bike Sharing [Dataset].* UCI Machine Learning Repository.  
+https://doi.org/10.24432/C5W894
 
 The target variable is:
 
