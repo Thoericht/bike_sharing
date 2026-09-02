@@ -6,6 +6,8 @@ This project focuses on predicting the hourly number of bike rentals (`cnt`) usi
 
 The goal is to build a reliable forecasting model suitable for a production-oriented demand prediction service.
 
+[View the executive summary presentation (PDF)](https://github.com/Thoericht/bike_sharing/blob/main/03_reports/bike_sharing_forecast_presentation_20260828.pdf)
+
 ## Dataset
 
 This project uses the Bike Sharing Dataset published by Fanaee-T, H. (2013) through the UCI Machine Learning Repository. The dataset contains **17,379 hourly observations** from 2011–2012, including rental counts, weather conditions, and calendar-related variables.
