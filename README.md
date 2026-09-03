@@ -4,7 +4,7 @@
 
 This project focuses on predicting the hourly number of bike rentals (`cnt`) using the UCI Bike Sharing Dataset. The workflow includes exploratory data analysis (EDA), feature engineering, model development, and evaluation of different machine learning approaches.
 
-The goal is to build a reliable forecasting model suitable for a production-oriented demand prediction service.
+The goal is to develop a reliable forecasting model as a foundation for a production-oriented demand prediction service.
 
 [View the executive summary presentation (PDF)](https://github.com/Thoericht/bike_sharing/blob/main/03_reports/bike_sharing_forecast_presentation_20260828.pdf)
 
@@ -43,17 +43,25 @@ The following models were compared:
 
 Evaluation was performed using a time-based train-test split and time-series validation.
 
-## Final Model Performance
+## Model Comparison
 
-The best performing model was **XGBoost**.
+The models were evaluated on the same time-based test set using R², MAE, and RMSE.
 
-Performance on the test set:
+| Model | R² | MAE (rentals/hour) | RMSE (rentals/hour) |
+|---|---:|---:|---:|
+| XGBoost | 0.957 | 29.12 | 45.48 |
+| Random Forest | 0.955 | 28.90 | 46.83 |
+| Linear Regression | 0.903 | 47.99 | 68.56 |
 
-| Metric | Score |
-|---|---:|
-| R² | 0.957 |
-| MAE | 29.12 rentals/hour |
-| RMSE | 45.48 rentals/hour |
+XGBoost achieved the highest R² and the lowest RMSE, making it the strongest overall model for this forecasting task. Random Forest produced the lowest MAE, indicating slightly better average absolute accuracy, but its larger RMSE suggests that it made more substantial errors on some observations.
+
+The final model selected for the forecasting service is **XGBoost**.
+
+## Time-Series Validation
+
+To assess model stability across different time periods, a five-fold time-series cross-validation was performed. The fold-level R² values ranged from 0.665 to 0.934, with lower performance in the earliest validation period and more stable results in later periods.
+
+This indicates that the model performs well overall but that forecast accuracy varies across different temporal segments.
 
 ## Key Findings
 
